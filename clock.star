@@ -19,14 +19,81 @@ ONE_ICON = base64.decode(
   """iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAAXNSR0IArs4c6QAAADpJREFUGFdjZGBgYHhnovcfRCMDoTOXGBmRJQRPX2R4b6oPVwOXBEmAAFZJkAROnXglYcYiG82Iz7UAMnEik+bzeUgAAAAASUVORK5CYII="""
 )
 
+SECOND_FRAME=render.Column(main_align="space_evenly", children=[
+                    render.Row(
+                      children=[
+                        render.Image(src=E_ICON,height=7,width=7),
+                        render.Box(height=8, width=1),
+                        render.Box(height=8, width=24, 
+                        # color='#FFFFFF', 
+                        child=render.Marquee(
+                          width=24,
+                          height=8,
+                          child=render.Text(content="5 min", 
+                          height=7, 
+                          color='#FFA500'
+                          )
+                        )),
+                      ]
+                    ),
+                    render.Row(
+                      children=[
+                        render.Image(src=E_ICON,height=7,width=7),
+                        render.Box(height=8, width=1),
+                        render.Box(height=8, width=24, 
+                        # color='#FFFFFF', 
+                        child=render.Marquee(
+                          width=24,
+                          height=8,
+                          child=render.Text(content="5 min", 
+                          height=7, 
+                          color='#FFA500'
+                          )
+                        )),
+                      ]
+                    ),
+                    render.Row(
+                      children=[
+                        render.Image(src=ONE_ICON,height=7,width=7),
+                        render.Box(height=8, width=1),
+                        render.Box(height=8, width=24, 
+                        # color='#FFFFFF', 
+                        child=render.Marquee(
+                          width=24,
+                          height=8,
+                          child=render.Text(content="5 min", 
+                          height=7, 
+                          color='#FFA500'
+                          )
+                        )),
+                      ]
+                    ),
+                    render.Row(
+                      children=[
+                        render.Image(src=ONE_ICON,height=7,width=7),
+                        render.Box(height=8, width=1),
+                        render.Box(height=8, width=24, 
+                        # color='#FFFFFF', 
+                        child=render.Marquee(
+                          width=24,
+                          height=8,
+                          child=render.Text(content="5 min", 
+                          height=7, 
+                          color='#FFA500'
+                          )
+                        )),
+                      ]
+                    ),
+                ])
 
 def main(config):
     timezone = config.get("timezone") or "America/New_York"
     now = time.now().in_location(timezone)
 
-    return render.Root(
+    return render.Root(delay=3000,
         child=render.Row(
             children=[
+              render.Animation(children=[
                 render.Column(main_align="space_evenly", children=[
                     render.Row(
                       children=[
@@ -78,7 +145,7 @@ def main(config):
                     ),
                     render.Row(
                       children=[
-                        render.Image(src=E_ICON,height=7,width=7),
+                        render.Image(src=ONE_ICON,height=7,width=7),
                         render.Box(height=8, width=1),
                         render.Box(height=8, width=24, 
                         # color='#FFFFFF', 
@@ -92,7 +159,7 @@ def main(config):
                         )),
                       ]
                     ),
-                ]),
+                ]),SECOND_FRAME]),
                 render.Column(main_align="space_evenly", children=[
                     render.Row(
                       children=[
