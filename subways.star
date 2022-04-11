@@ -252,27 +252,6 @@ def main(config):
 
     uptownList.append(generate_column(uptownChildren))
     downtownList.append(generate_column(downtownChildren))
-  # for i in range(len(uptown_stations)):
-  #   newChildren = []
-  #   for j in range (len(uptown_stations[i])):
-  #     newChildren.append(generate_row(uptown_stations[i][j]['route'],uptown_stations[i][j]['time'],'uptown'))
-
-  #   print(newChildren)
-  #   newCol = generate_column(newChildren)
-  #   print(newCol)
-  #   uptownList.append(newCol)
-
-  # for i in range(len(downtown_stations)):
-  #   # uptownList.append([])
-  #   newChildren = []
-  #   for j in range (len(downtown_stations[i])):
-  #     newChildren.append(generate_row(downtown_stations[i][j]['route'],downtown_stations[i][j]['time'],'downtown'))
-
-  #   print(newChildren)
-  #   newCol = generate_column(newChildren)
-  #   print(newCol)
-  #   downtownList.append(newCol)
-
 
   print('uptownList', uptownList)
 
