@@ -208,7 +208,7 @@ def generate_row(line,time,direction):
                     )
 
 def main(config):
-  data = http.get('http://127.0.0.1:3000/',params={},headers={},auth=())
+  data = http.get('http://140.82.45.186:3000/',params={},headers={},auth=())
   uptown_stations = data.json()['uptown']
   downtown_stations = data.json()['downtown']
 
