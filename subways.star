@@ -252,11 +252,10 @@ def main(config):
 
     uptownList.append(generate_column(uptownChildren))
     downtownList.append(generate_column(downtownChildren))
+    
 
-  print('uptownList', uptownList)
-
-  second_frame_list = [SECOND_FRAME, SECOND_FRAME]
-  print('secondFrame', second_frame_list)
+  # second_frame_list = [SECOND_FRAME, SECOND_FRAME]
+  print("Reloading")
   return render.Root(delay=5000,
         child=render.Row(
             children=[
